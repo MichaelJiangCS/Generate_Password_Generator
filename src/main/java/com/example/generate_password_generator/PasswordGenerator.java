@@ -39,7 +39,7 @@ public class PasswordGenerator {
             // get char at that index
             char randomChar = validCharacters.charAt(randomIndex);
 
-            //append char
+            // append char to build password
             password.append(randomChar);
         }
 
