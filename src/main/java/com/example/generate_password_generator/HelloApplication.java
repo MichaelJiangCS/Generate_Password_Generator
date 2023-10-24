@@ -15,9 +15,11 @@ public class HelloApplication extends Application {
         stage.setTitle("Secrete Password");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
         launch();
+
     }
 }
