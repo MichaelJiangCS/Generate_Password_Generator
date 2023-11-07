@@ -10,7 +10,7 @@ public class PasswordGenerator {
     public static final String NUMBERS = "012345679";
     public static final String SPECIAL_SYMBOLS = "!@#$%^&*()-_=+[]{};:,.<>/?";
 
-    // Creates a new random number generator
+    // Creates a new [SECURE] random number generator
     private final SecureRandom random;
 
     // Ctor
@@ -22,6 +22,7 @@ public class PasswordGenerator {
     public String generatePassword (int length, boolean includeUppercase, boolean includeLowercase, boolean includeNumbers,
                                     boolean includeSpecialSymbols){
 
+        // string builder is used to build the password
         StringBuilder password = new StringBuilder();
 
         // Store valid characters based on user's toggle

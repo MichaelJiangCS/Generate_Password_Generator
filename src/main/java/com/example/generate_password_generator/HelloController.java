@@ -46,6 +46,8 @@ public class HelloController {
 
         // length must be greater than 0
         if(passwordLength <= 0){
+            // disable Generate button
+            generateButton.setDisable(true);
             return;
         }
 

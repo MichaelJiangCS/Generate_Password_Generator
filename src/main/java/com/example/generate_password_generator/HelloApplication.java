@@ -12,14 +12,16 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Secrete Password");
+        stage.setTitle("Secret Password");
         stage.setScene(scene);
         stage.show();
-
+        stage.setResizable(false);
     }
 
     public static void main(String[] args) {
         launch();
-
+        // TODO:
+            // disable Generate button when length is 0
+            // disable letters input in the length field
     }
 }
