@@ -19,7 +19,10 @@
       <Label layoutX="145.0" layoutY="116.0" prefHeight="33.0" prefWidth="54.0" text="Length:" />
       <TextArea fx:id="lengthInput" layoutX="212.0" layoutY="114.0" prefHeight="15.0" prefWidth="190.0" promptText="Enter Password Length" />
       <Button fx:id="generateButton" layoutX="274.0" layoutY="269.0" mnemonicParsing="false" onAction="#generateButtonClicked" text="Generate" />
-      <ToggleButton fx:id="uppercaseToggle" layoutX="92.0" layoutY="188.0" mnemonicParsing="false" text="Uppercase" />
+      <ToggleButton fx:id="uppercaseToggle" layoutX="92.0" layoutY="188.0" mnemonicParsing="false" text="Uppercase">
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font></ToggleButton>
       <ToggleButton fx:id="lowercaseToggle" layoutX="211.0" layoutY="188.0" mnemonicParsing="false" text="Lowercase" />
       <ToggleButton fx:id="numbersToggle" layoutX="339.0" layoutY="188.0" mnemonicParsing="false" text="Numbers" />
       <ToggleButton fx:id="symbolsToggle" layoutX="455.0" layoutY="188.0" mnemonicParsing="false" text="Symbols" />

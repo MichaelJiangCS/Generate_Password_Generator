@@ -7,7 +7,7 @@ public class PasswordGenerator {
     // character pools: upper & lower characters, nums and special symbols
     public static final String LOWERCASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     public static final String UPPERCASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String NUMBERS = "012345679";
+    public static final String NUMBERS = "0123456789";
     public static final String SPECIAL_SYMBOLS = "!@#$%^&*()-_=+[]{};:,.<>/?";
 
     // Creates a new [SECURE] random number generator
