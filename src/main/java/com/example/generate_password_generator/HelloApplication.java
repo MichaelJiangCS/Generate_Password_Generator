@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         launch();
         // TODO:
-            // disable Generate button when length is 0
+
             // disable letters input in the length field
     }
 }

@@ -27,10 +27,10 @@ public class PasswordGenerator {
 
         // Store valid characters based on user's toggle
         String validCharacters = "";
-        if(includeUppercase) validCharacters += UPPERCASE_CHARACTERS;
-        if(includeLowercase) validCharacters += LOWERCASE_CHARACTERS;
-        if(includeNumbers) validCharacters += NUMBERS;
-        if(includeSpecialSymbols) validCharacters += SPECIAL_SYMBOLS;
+        if(includeUppercase) validCharacters += UPPERCASE_CHARACTERS; //append validCharacters with uppercase letters
+        if(includeLowercase) validCharacters += LOWERCASE_CHARACTERS; //append validCharacters with lowercase letters
+        if(includeNumbers) validCharacters += NUMBERS; // append validCharacters with numbers
+        if(includeSpecialSymbols) validCharacters += SPECIAL_SYMBOLS; // append validCharacters with symbols
 
         // build password
         for(int i = 0; i < length; i++) {

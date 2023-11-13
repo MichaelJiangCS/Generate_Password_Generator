@@ -37,17 +37,17 @@ public class HelloController {
 
     @FXML
     public void generateButtonClicked(ActionEvent actionEvent) {
-        // call generatePassword() method when this button is clicked
+        // detect if any of the toggle is selected and store it as a boolean
         boolean anyToggleSelected = uppercaseToggle.isSelected() || lowercaseToggle.isSelected() || numbersToggle.isSelected()
                 || symbolsToggle.isSelected();
 
-        // convert user input into an int
+        // convert text into an int
         int passwordLength = Integer.parseInt(lengthInput.getText());
 
         // length must be greater than 0
-        if(passwordLength <= 0){
-            // disable Generate button
-            generateButton.setDisable(true);
+        if(passwordLength <= 0) {
+            // use textArea to display an error msg
+            passwordOutput.setText("Error: only positive integers are accepted!");
             return;
         }
 
