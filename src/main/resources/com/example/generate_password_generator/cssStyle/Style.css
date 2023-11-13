@@ -1,0 +1,5 @@
+/* css sheet to use for the background */
+.root{
+    -fx-background-image:url('../image/key.jpg') no-repeat;
+    -fx-background-size:cover;
+}
