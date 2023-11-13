@@ -14,6 +14,9 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Secret Password");
         stage.setScene(scene);
+        // set initial size
+        stage.setWidth(750);
+        stage.setHeight(600);
         stage.show();
         stage.setResizable(false);
     }
