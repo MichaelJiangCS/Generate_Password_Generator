@@ -64,7 +64,7 @@ public class HelloController {
         // convert user word input to a String
         String SecretWordInput = (secretWord.getText().equals("")) ? "" : secretWord.getText();
 
-        
+
 
 
         // length must be greater than 0
