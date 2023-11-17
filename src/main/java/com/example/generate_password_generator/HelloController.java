@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TextFormatter;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.AnchorPane;
 
 public class HelloController {
@@ -48,23 +50,6 @@ public class HelloController {
         secretWord.setText("");
         wordChoicePlacement.getItems().addAll("Beginning", "Middle", "End");
         wordChoicePlacement.setValue("");
-
-
-        // disable letter/symbol input in lengthInput textArea, only numbers are allowed:
-
-        lengthInput.setWrapText(true);
-
-        // Create a TextFormatter with a filter that allows only numeric input
-        TextFormatter<Object> textFormatter = new TextFormatter<>(change -> {
-            if (change.getText().matches("[0-9]*")) {
-                return change; // Accept the change
-            } else {
-                return null; // Reject the change
-            }
-        });
-
-        // Apply the TextFormatter to the TextArea
-        lengthInput.setTextFormatter(textFormatter);
     }
 
     @FXML
@@ -73,18 +58,19 @@ public class HelloController {
         boolean anyToggleSelected = uppercaseToggle.isSelected() || lowercaseToggle.isSelected() || numbersToggle.isSelected()
                 || symbolsToggle.isSelected();
 
-
-
-
+        // convert user input into an int
         int passwordLength = Integer.parseInt(lengthInput.getText());
 
         // convert user word input to a String
         String SecretWordInput = (secretWord.getText().equals("")) ? "" : secretWord.getText();
 
+        
+
 
         // length must be greater than 0
         if(passwordLength <= 0){
-            passwordOutput.setText("Error: Please enter only positive integers!");
+            // disable Generate button
+            generateButton.setDisable(true);
             return;
         }
 
