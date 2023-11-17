@@ -2,13 +2,7 @@ package com.example.generate_password_generator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 public class HelloController {
@@ -50,6 +44,20 @@ public class HelloController {
         secretWord.setText("");
         wordChoicePlacement.getItems().addAll("Beginning", "Middle", "End");
         wordChoicePlacement.setValue("");
+
+        lengthInput.setWrapText(true);
+
+        // Create a TextFormatter with a filter that allows only numeric input
+        TextFormatter<Object> textFormatter = new TextFormatter<>(change -> {
+            if (change.getText().matches("[0-9]*")) {
+                return change; // Accept the change
+            } else {
+                return null; // Reject the change
+            }
+        });
+
+        // Apply the TextFormatter to the TextArea
+        lengthInput.setTextFormatter(textFormatter);
     }
 
     @FXML
