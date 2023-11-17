@@ -6,15 +6,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="titleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="621.0" styleClass="./root" stylesheets="@cssStyle/Style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generate_password_generator.HelloController">
+<AnchorPane fx:id="titleText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generate_password_generator.HelloController">
    <children>
-      <Text layoutX="136.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Password Generator">
+      <Text layoutX="68.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Random Password Generator" textAlignment="CENTER">
          <font>
-            <Font name="Comic Sans MS Bold" size="24.0" />
+            <Font name="Comic Sans MS Bold" size="34.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
       <TextArea fx:id="passwordOutput" layoutX="145.0" layoutY="304.0" prefHeight="53.0" prefWidth="310.0" />
       <Label layoutX="145.0" layoutY="116.0" prefHeight="33.0" prefWidth="54.0" text="Length:" />
