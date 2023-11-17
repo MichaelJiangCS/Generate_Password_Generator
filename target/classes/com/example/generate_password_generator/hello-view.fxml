@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
@@ -36,10 +35,7 @@
             </LinearGradient>
          </fill>
       </Text>
-      <TextArea fx:id="passwordOutput" layoutX="285.0" layoutY="482.0" prefHeight="53.0" prefWidth="310.0">
-         <effect>
-            <BoxBlur />
-         </effect></TextArea>
+      <TextArea fx:id="passwordOutput" layoutX="285.0" layoutY="482.0" prefHeight="53.0" prefWidth="310.0" />
       <Label layoutX="198.0" layoutY="175.0" prefHeight="34.0" prefWidth="112.0" text="Length:">
          <textFill>
             <LinearGradient endX="1.0" startX="0.7298578199052133" startY="0.6729857819905214">
@@ -67,20 +63,23 @@
          <effect>
             <InnerShadow height="23.45" radius="16.355" width="43.97" />
          </effect></TextArea>
-      <Button fx:id="generateButton" layoutX="138.0" layoutY="487.0" mnemonicParsing="false" onAction="#generateButtonClicked" prefHeight="43.0" prefWidth="94.0" text="Generate" />
-      <ToggleButton fx:id="uppercaseToggle" layoutX="246.0" layoutY="276.0" mnemonicParsing="false" text="Uppercase">
+      <Button fx:id="generateButton" layoutX="138.0" layoutY="487.0" mnemonicParsing="false" onAction="#generateButtonClicked" prefHeight="43.0" prefWidth="94.0" text="Generate" textAlignment="CENTER">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font></Button>
+      <ToggleButton fx:id="uppercaseToggle" layoutX="246.0" layoutY="276.0" mnemonicParsing="false" text="Uppercase" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></ToggleButton>
-      <ToggleButton fx:id="lowercaseToggle" layoutX="365.0" layoutY="276.0" mnemonicParsing="false" text="Lowercase">
+      <ToggleButton fx:id="lowercaseToggle" layoutX="375.0" layoutY="276.0" mnemonicParsing="false" text="Lowercase" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></ToggleButton>
-      <ToggleButton fx:id="numbersToggle" layoutX="165.0" layoutY="375.0" mnemonicParsing="false" text="Numbers">
+      <ToggleButton fx:id="numbersToggle" layoutX="152.0" layoutY="375.0" mnemonicParsing="false" text="Numbers" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></ToggleButton>
-      <ToggleButton fx:id="symbolsToggle" layoutX="290.0" layoutY="375.0" mnemonicParsing="false" text="Symbols">
+      <ToggleButton fx:id="symbolsToggle" layoutX="290.0" layoutY="375.0" mnemonicParsing="false" text="Symbols" textAlignment="CENTER">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font></ToggleButton>
