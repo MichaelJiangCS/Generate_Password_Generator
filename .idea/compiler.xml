@@ -9,8 +9,5 @@
         <module name="Generate_Password_Generator" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Generate_Password_Generator" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

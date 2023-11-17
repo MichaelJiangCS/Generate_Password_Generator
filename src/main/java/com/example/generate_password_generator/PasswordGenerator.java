@@ -2,15 +2,17 @@ package com.example.generate_password_generator;
 
 import java.security.SecureRandom;
 
+import javafx.scene.transform.Scale;
+
 
 public class PasswordGenerator {
     // character pools: upper & lower characters, nums and special symbols
     public static final String LOWERCASE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz";
     public static final String UPPERCASE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    public static final String NUMBERS = "0123456789";
+    public static final String NUMBERS = "012345679";
     public static final String SPECIAL_SYMBOLS = "!@#$%^&*()-_=+[]{};:,.<>/?";
 
-    // Creates a new [SECURE] random number generator
+    // Creates a new random number generator
     private final SecureRandom random;
 
     // Ctor
@@ -20,10 +22,11 @@ public class PasswordGenerator {
 
 
     public String generatePassword (int length, boolean includeUppercase, boolean includeLowercase, boolean includeNumbers,
-                                    boolean includeSpecialSymbols){
+                                    boolean includeSpecialSymbols, String SecretWord, String valueChoiceBox){
 
-        // string builder is used to build the password
         StringBuilder password = new StringBuilder();
+
+        boolean isChoiceSelected = (valueChoiceBox.equals("")) ? false : true;
 
         // Store valid characters based on user's toggle
         String validCharacters = "";
@@ -42,6 +45,20 @@ public class PasswordGenerator {
 
             // append char to build password
             password.append(randomChar);
+        }
+
+        if(isChoiceSelected==true){
+            if(valueChoiceBox.equals("Beginning")){
+                //
+                return password.substring(0,0) + SecretWord + password.substring(0); // append at the beginning of the string
+            } else if (valueChoiceBox.equals("Middle")){
+                //
+                int findMiddleIndex = length/2;
+                return password.substring(0,findMiddleIndex) + SecretWord + password.substring(findMiddleIndex); // append at the middle of the string
+            } else {
+                //
+                password.append(SecretWord); // append it to the end
+            }
         }
 
         return password.toString();
