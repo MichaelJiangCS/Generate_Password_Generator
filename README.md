@@ -127,8 +127,11 @@ public void initialize(){
         lengthInput.setTextFormatter(textFormatter);
     }
 ```
-This code sets the initiallization of the program. When the program runs, user is not supposed to input anyting in the output text area. The secret word text area should be empty at the beginning. In addition, user is only allowed to input integers in the length text area.
+This code sets the initiallization of the program. When the program runs, user is not supposed to input anyting in the output text area. The secret word text area should be empty at the beginning. In addition, user is only allowed to input integers in the length text area.<br>
 
-
-
-- Credits: Rebecca Dady, Audre Jankowski, Michael Jiang, Zee Pearson, Kevin Wang.
+## Contributors
+-Rebecca Dady
+-Audre Jankowski
+-Michael Jiang
+-Zee Pearson
+-Kevin Wang
