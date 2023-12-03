@@ -1,12 +1,22 @@
 package com.example.generate_password_generator;
 
+import java.io.InputStream;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+
+
 
 public class HelloController {
     private PasswordGenerator passwordGenerator = new PasswordGenerator();
+
+    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 9);
+    final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),30);
+
+
 
     @FXML
     private AnchorPane titleText;
@@ -16,6 +26,13 @@ public class HelloController {
     private TextArea lengthInput;
     @FXML
     private TextArea secretWord;
+
+    @FXML
+    private Label choiceLabel;
+    @FXML 
+    private Label labelForUserInputLength;
+    @FXML
+    private Label HeaderFont;
 
     // Buttons
     @FXML
@@ -38,12 +55,24 @@ public class HelloController {
     private CheckBox numbersToggle;
 
 
+
     // not allowing user to edit the output textArea
     public void initialize(){
         passwordOutput.setEditable(false);
         secretWord.setText("");
         wordChoicePlacement.getItems().addAll("Beginning", "Middle", "End");
         wordChoicePlacement.setValue("");
+
+        uppercaseToggle.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        lowercaseToggle.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        symbolsToggle.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        numbersToggle.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        generateButton.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        resetButton.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+
+        choiceLabel.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        labelForUserInputLength.setFont(DOGICA_PIXEL_BOLD_LOAD_FLIE);
+        HeaderFont.setFont(PIXELLAND_LOAD_FLIE);
 
         lengthInput.setWrapText(true);
 
@@ -103,6 +132,7 @@ public class HelloController {
         lengthInput.setText("");
         passwordOutput.setText("");
         secretWord.setText("");
+        wordChoicePlacement.setValue("");
         uppercaseToggle.setSelected(false);
         lowercaseToggle.setSelected(false);
         numbersToggle.setSelected(false);

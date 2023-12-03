@@ -1,5 +1,13 @@
  /* css sheet to use for the background */
+
  .root{
-     -fx-background-image:url('../image/key.png') no-repeat;
-     -fx-background-size:cover;
- }
+   -fx-background-color: linear-gradient(to top, #000000, #ffffff);
+   -fx-border-color:linear-gradient(to top, #ffffff, #000000); 
+   -fx-border-width: 5; 
+   -fx-border-style: solid;
+   -fx-background-size:cover;
+}
+
+.title{
+  -fx-font-family: '';
+}
