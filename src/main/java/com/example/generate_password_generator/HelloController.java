@@ -1,7 +1,5 @@
 package com.example.generate_password_generator;
 
-import java.io.InputStream;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,15 +9,17 @@ import javafx.scene.text.Font;
 
 
 public class HelloController {
+    
     private PasswordGenerator passwordGenerator = new PasswordGenerator();
-
-    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 8);
+    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 10);
     final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),36);
 
 
 
     @FXML
     private AnchorPane titleText;
+
+    // TextAreas
     @FXML
     private TextArea passwordOutput;
     @FXML
@@ -27,6 +27,7 @@ public class HelloController {
     @FXML
     private TextArea secretWord;
 
+    // Labels
     @FXML
     private Label choiceLabel;
     @FXML 
@@ -40,11 +41,11 @@ public class HelloController {
     @FXML
     private Button resetButton;
 
-    // Slider
+    // ChoiceBox
     @FXML
     private ChoiceBox<String> wordChoicePlacement;
 
-    // ToggleButtons
+    // CheckBox
     @FXML
     private CheckBox uppercaseToggle;
     @FXML
