@@ -13,8 +13,8 @@ import javafx.scene.text.Font;
 public class HelloController {
     private PasswordGenerator passwordGenerator = new PasswordGenerator();
 
-    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 9);
-    final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),30);
+    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 8);
+    final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),36);
 
 
 

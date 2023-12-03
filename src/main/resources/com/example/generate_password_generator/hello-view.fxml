@@ -9,47 +9,47 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="titleText" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@cssStyle/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generate_password_generator.HelloController">
+<AnchorPane fx:id="titleText" minHeight="-Infinity" minWidth="-Infinity" prefHeight="583.0" prefWidth="674.0" stylesheets="@cssStyle/Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.generate_password_generator.HelloController">
    <children>
-      <TextArea fx:id="passwordOutput" layoutX="147.0" layoutY="304.0" prefHeight="53.0" prefWidth="310.0" />
-      <Label fx:id="HeaderFont" alignment="CENTER" layoutX="16.0" layoutY="14.0" prefHeight="34.0" prefWidth="459.0" text="SECRET PASSWORD">
+      <TextArea fx:id="passwordOutput" layoutX="163.0" layoutY="345.0" prefHeight="53.0" prefWidth="310.0" />
+      <Label fx:id="HeaderFont" alignment="CENTER" layoutX="88.0" layoutY="14.0" prefHeight="34.0" prefWidth="459.0" text="SECRET PASSWORD">
          <font>
             <Font size="36.0" />
          </font></Label>
-      <TextArea fx:id="lengthInput" layoutX="150.0" layoutY="106.0" prefHeight="15.0" prefWidth="190.0" promptText="Enter Password Length" />
-      <Button fx:id="generateButton" layoutX="255.0" layoutY="274.0" mnemonicParsing="false" onAction="#generateButtonClicked" prefHeight="24.0" prefWidth="94.0" text="Generate">
+      <TextArea fx:id="lengthInput" layoutX="222.0" layoutY="115.0" prefHeight="15.0" prefWidth="190.0" promptText="Enter Password Length" />
+      <Button fx:id="generateButton" layoutX="271.0" layoutY="307.0" mnemonicParsing="false" onAction="#generateButtonClicked" prefHeight="24.0" prefWidth="94.0" text="Generate">
          <font>
             <Font name="Dogica Pixel" size="10.0" />
          </font></Button>
-      <Button fx:id="resetButton" layoutX="255.0" layoutY="362.0" mnemonicParsing="false" onAction="#resetButtonClick" prefHeight="26.0" prefWidth="94.0" text="Reset">
+      <Button fx:id="resetButton" layoutX="271.0" layoutY="422.0" mnemonicParsing="false" onAction="#resetButtonClick" prefHeight="26.0" prefWidth="94.0" text="Reset">
          <font>
             <Font name="Dogica Pixel" size="10.0" />
          </font>
          <tooltip>
             <Tooltip text="Reset all previously modified configurations." />
          </tooltip></Button>
-      <CheckBox fx:id="uppercaseToggle" layoutX="40.0" layoutY="165.0" mnemonicParsing="false" text="Uppercase">
+      <CheckBox fx:id="uppercaseToggle" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" text="Uppercase">
          <font>
-            <Font size="14.0" />
+            <Font size="11.0" />
          </font></CheckBox>
-      <CheckBox fx:id="lowercaseToggle" layoutX="147.0" layoutY="165.0" mnemonicParsing="false" text="Lowercase">
+      <CheckBox fx:id="lowercaseToggle" layoutX="95.0" layoutY="159.0" mnemonicParsing="false" text="Lowercase">
          <font>
-            <Font size="14.0" />
+            <Font size="11.0" />
          </font></CheckBox>
-      <CheckBox fx:id="symbolsToggle" layoutX="40.0" layoutY="212.0" mnemonicParsing="false" text="Symbols">
+      <CheckBox fx:id="symbolsToggle" layoutX="14.0" layoutY="204.0" mnemonicParsing="false" text="Symbols">
          <font>
-            <Font size="14.0" />
+            <Font size="11.0" />
          </font></CheckBox>
-      <CheckBox fx:id="numbersToggle" layoutX="150.0" layoutY="212.0" mnemonicParsing="false" text="Numbers">
+      <CheckBox fx:id="numbersToggle" layoutX="95.0" layoutY="204.0" mnemonicParsing="false" text="Numbers">
          <font>
-            <Font size="14.0" />
+            <Font size="11.0" />
          </font></CheckBox>
-      <Label fx:id="choiceLabel" alignment="CENTER" layoutX="254.0" layoutY="155.0" prefHeight="39.0" prefWidth="224.0" text="Add a Secret Word of Your Choosing" />
-      <TextArea fx:id="secretWord" layoutX="266.0" layoutY="192.0" prefHeight="26.0" prefWidth="190.0" promptText="Enter a Word of Your Choice" />
-      <ChoiceBox fx:id="wordChoicePlacement" layoutX="286.0" layoutY="240.0" prefWidth="150.0">
+      <Label fx:id="choiceLabel" alignment="CENTER" layoutX="180.0" layoutY="155.0" prefHeight="39.0" prefWidth="276.0" text="Add a Secret Word of Your Choosing" />
+      <TextArea fx:id="secretWord" layoutX="223.0" layoutY="192.0" prefHeight="26.0" prefWidth="190.0" promptText="Enter a Word of Your Choice" />
+      <ChoiceBox fx:id="wordChoicePlacement" layoutX="242.0" layoutY="240.0" prefWidth="150.0">
          <tooltip>
             <Tooltip text="Choose where your secret word should be positioned." />
          </tooltip></ChoiceBox>
-      <Label fx:id="labelForUserInputLength" layoutX="150.0" layoutY="74.0" text="A Randomized Password Generator" />
+      <Label fx:id="labelForUserInputLength" layoutX="224.0" layoutY="80.0" text="A Randomized Password Generator" />
    </children>
 </AnchorPane>
