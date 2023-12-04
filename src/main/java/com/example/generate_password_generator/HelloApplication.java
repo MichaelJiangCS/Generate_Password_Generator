@@ -25,6 +25,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Secret Password");
         stage.setScene(scene);
         stage.show();
+        stage.setMaxHeight(800);
+        stage.setMaxWidth(900);
         stage.setResizable(false);
 
     }
