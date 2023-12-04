@@ -11,8 +11,8 @@ import javafx.scene.text.Font;
 public class HelloController {
     
     private PasswordGenerator passwordGenerator = new PasswordGenerator();
-    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 10);
-    final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),36);
+    final Font DOGICA_PIXEL_BOLD_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/dogicapixelbold.ttf"), 8);
+    final Font PIXELLAND_LOAD_FLIE = Font.loadFont(getClass().getResourceAsStream("fonts/Pixeland.ttf"),56);
 
 
 
@@ -107,8 +107,6 @@ public class HelloController {
 
         // length must be greater than 0
         if(passwordLength <= 0){
-            // disable Generate button
-            generateButton.setDisable(true);
             return;
         }
 
