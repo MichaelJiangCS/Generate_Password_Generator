@@ -47,6 +47,7 @@ public class PasswordGenerator {
             password.append(randomChar);
         }
 
+
         if(isChoiceSelected==true){
             if(valueChoiceBox.equals("Beginning")){
                 //
